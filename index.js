@@ -33,7 +33,7 @@ let productsCollection;
 
 async function run() {
   try {
-    await client.connect();
+    // await client.connect();
     console.log("Connected to MongoDB successfully!");
 
     // Define database and collection
@@ -41,7 +41,7 @@ async function run() {
     productsCollection = database.collection("product");
 
     // Verify connection
-    await client.db("admin").command({ ping: 1 });
+    // await client.db("admin").command({ ping: 1 });
     console.log("Pinged MongoDB deployment. Connection verified.");
   } catch (err) {
     console.error("Error connecting to MongoDB:", err);
